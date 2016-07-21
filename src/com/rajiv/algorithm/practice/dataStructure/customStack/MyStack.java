@@ -39,7 +39,7 @@ public class MyStack <T> {
     }
 
     public void checkSizeAfterPop(){
-        if(stack.length/2==count){
+        if(stack.length>2 && stack.length/2==count){
             stack = Arrays.copyOf(stack,count);
             index = 1;
         }

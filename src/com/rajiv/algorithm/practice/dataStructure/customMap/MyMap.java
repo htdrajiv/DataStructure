@@ -52,7 +52,7 @@ public class MyMap <K,V> {
                 maps[i]=null;
                 count--;
             }
-            if(count==maps.length/2){
+            if(maps.length>2 && count==maps.length/2){
                 maps = Arrays.copyOf(maps,maps.length/2);
             }
         }
