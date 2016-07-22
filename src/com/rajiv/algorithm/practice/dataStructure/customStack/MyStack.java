@@ -18,15 +18,12 @@ public class MyStack <T> {
 
     public T peek(){
         checkForPeekPopException();
-        while(stack[(stack.length)-index]==null){
-            index ++;
-        }
-        return stack[(stack.length)-index];
+        return stack[count-1];
     }
 
     public T pop(){
         T result = peek();
-        stack[(stack.length)-index] = null;
+        stack[count-1] = null;
         count--;
         checkSizeAfterPop();
         return result;
